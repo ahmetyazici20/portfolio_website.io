@@ -1,0 +1,236 @@
+/* Genel stil ve dark mode */
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.5s, color 0.5s;
+    background: url('resimler/light_mode.jpg') no-repeat center/cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+body.dark-mode {
+    background: url('resimler/dark_mode.jpg') no-repeat center/cover;
+    background-attachment: fixed;
+    color: #f4f4f4;
+}
+
+/* Sabit Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+button#toggle-mode {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+/* Saat Stili */
+#clock {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* İçerik Stili */
+.hero, .about, .portfolio {
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: 60px; /* Navbar için boşluk */
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.hakkimda {
+    background: rgba(211, 211, 211, 0.8); /* Transparan arka plan */
+    padding: 2rem; /* İçerik ile kenarlar arasında boşluk */
+    margin: 2rem auto; /* Dış kenarlara boşluk */
+    margin-top: 10rem;
+    max-width: 1200px; /* Genişliği sınırlamak için */
+    border-radius: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* İletişim Formu ve Biyografi Alanı */
+.contact-form form {
+    width: 50%; /* Tam genişlik */
+    position: absolute; /* Ekranın altına sabitlemek için */
+    bottom: 0;
+    left: 0;
+    padding: 1rem 2rem; /* Kenar boşlukları ayarı */
+    margin-left: 45rem;
+}
+
+body.dark-mode .hakkimda {
+    background-color: #666666;
+    color: #ffffff;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 45%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+/* Karanlık Mod için Form */
+body.dark-mode .contact-form form, body.dark-mode .about {
+    color: #f4f4f4;
+}
+
+body.dark-mode .contact-form input, body.dark-mode .contact-form textarea {
+    background: #555;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+/* Karanlık Mod için Hero ve Portfolio Item */
+.hero {
+    color: #000000;
+    height: 70vh;
+    transition: color 0.5s;
+}
+
+body.dark-mode .hero {
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #555;
+}
+
+.about h2, .portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Min genişlik 200px, maks genişlik 1fr */
+    gap: 1.5rem; /* Kartlar arasındaki boşluk */
+    align-items: start; /* Yükseklik farklılıklarını hizala */
+}
+
+.portfolio-item {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s, color 0.5s, transform 0.3s;
+    text-align: center;
+    max-width: 300px; /* Her bir kart için maksimum genişlik */
+    margin: auto; /* Kartları ortalar */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .portfolio-item {
+    background-color: #555;
+    color: #f4f4f4;
+}
+
+.controls {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#filter-input {
+    padding: 0.8rem;
+    width: 300px;
+    font-size: 1rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}

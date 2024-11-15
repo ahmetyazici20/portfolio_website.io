@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+     <header>
+        <nav class="navbar">
+            <div class="navbar-brand">Ahmet Burak Yazıcı</div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html">Projelerim</a></li>
+            </ul>
+            <div class="navbar-right">
+                <div id="clock"></div>
+                <button id="toggle-mode">🌗</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hakkimda">
+        <h2>Hakkımda</h2>
+        <p>Benim adım Ahmet Burak Yazıcı. Şuanda RTEU'da Bilgisayar Mühendisliği öğrenimime devam ediyorum.
+        Türkiyenin güzide İstanbul şehrinin GaziOsmanpaşa semtinde 2002 senesinde doğdum... </p>
+        <button id="more-btn">Daha Fazla Gör</button>
+        <p id="extra-text" style="display:none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <section class="hakkimda">
+        <h2>Yeteneklerim</h2>
+        <details>
+            <summary>
+                Daha Fazla Gör
+            </summary>
+            <label for="web_skills">Web Dev Skills</label>
+            <progress id="web_skills" value="50" max="100"></progress><br>
+            <label for="c_skills">C Skills</label>
+            <progress id="c_skills" value="50" max="100"></progress><br>
+            <label for="py_skills">Phyton Skills</label>
+            <progress id="py_skills" value="50" max="100"></progress><br>
+            <label for="alg_skills">Algorithm Skills</label>
+            <progress id="alg_skills" value="50" max="100"></progress><br>
+            <label for="ai_skills">AI Skills</label>
+            <progress id="ai_skills" value="50" max="100"></progress><br>
+        </details>
+        
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

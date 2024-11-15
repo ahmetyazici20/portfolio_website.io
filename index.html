@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Cihaz ekranına bağlı sayfa boyutu değişmesi-->
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">Ahmet Burak Yazıcı</div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html">Projelerim</a></li>
+            </ul>
+            <div class="navbar-right">
+                <div id="clock"></div>
+                <button id="toggle-mode">🌗</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Ben Ahmet Burak!</h1>
+        <p> Bilgisayar Mühendisliği Okuyorum.</p>
+        <button onclick="alert('CV İNDİR!')">CV İNDİR</button>
+    </section>
+
+    <!-- İletişim Formu -->
+    <section class="contact-form">  
+        <form onsubmit="return validateForm()">
+            <h2>İletişim</h2>
+            <input type="text" id="name" placeholder="Tam isminiz">
+            <br>
+            <input type="email" id="email" placeholder="E-posta">
+            <br>
+            <textarea id="message" placeholder="Mesajınız"></textarea>
+            <br>
+            <button type="submit">Gönder</button>
+        </form>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

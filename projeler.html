@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+     <header>
+        <nav class="navbar">
+            <div class="navbar-brand">Ahmet Burak Yazıcı</div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="projeler.html">Projelerim</a></li>
+            </ul>
+            <div class="navbar-right">
+                <div id="clock"></div>
+                <button id="toggle-mode">🌗</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="portfolio">
+        <h2>Projelerim</h2>
+        <div class="controls">
+            <input type="text" id="filter-input" placeholder="Proje Ara..." oninput="filterProjects()">
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-name="Bilimsel Hesap Makinası Form Uygulaması">
+                <img src="resimler/scientific_calc.png" alt="Proje 1">
+                <p>Bilimsel Hesap Makinası Form Uygulaması</p>
+            </div>
+            <div class="portfolio-item" data-name="Yılan Oyunu">
+                <img src="resimler/snake.png" alt="Proje 2">
+                <p>Yılan Oyunu</p>
+            </div>
+            <div class="portfolio-item" data-name="Youtube Video İndirici Mobil Uygulama">
+                <img src="resimler/youtube_down.png" alt="Proje 3">
+                <p>Youtube Video İndirici Mobil Uygulama</p>
+            </div>
+            <div class="portfolio-item" data-name="Dil Çeviri Örnek Uygulaması">
+                <img src="resimler/lang.png" alt="Proje 4">
+                <p>Dil Çeviri Örnek Uygulaması</p>
+            </div>
+            <div class="portfolio-item" data-name="Tabu Arama Algoritması">
+                <img src="resimler/tabu_search.png" alt="Proje 5">
+                <p>Tabu Arama Algoritması</p>
+            </div>
+            <div class="portfolio-item" data-name="Dil Çeviri Örnek Uygulaması">
+                <img src="resimler/lang.png" alt="Proje 6">
+                <p>Dil Çeviri Örnek Uygulaması</p>
+            </div>
+            <div class="portfolio-item" data-name="Dil Çeviri Örnek Uygulaması">
+                <img src="resimler/lang.png" alt="Proje 7">
+                <p>Dil Çeviri Örnek Uygulaması</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
